@@ -640,3 +640,49 @@ Without TLS, data sent between the browser and server is not properly protected.
 **5. What could happen if you leave your cloud VM running for months?**  
 Leaving a cloud VM running for a long time may result in unnecessary charges. It can also increase security risk if the server is left exposed without proper maintenance or monitoring.
 ______________________________________________________________________________________
+
+## Session 3b – Server Automation
+### Steps Performed
+1. Started the AWS EC2 Ubuntu server.
+2. Connected to the server using SSH from WSL.
+3. Created a folder named `automation_lab` to store the automation files.
+4. Created a Bash script called `update_task.sh`.
+5. Wrote commands in the script to run `apt update` and append the output to a log file.
+6. Made the script executable using `chmod +x`.
+7. Ran the script manually to confirm it worked correctly.
+8. Opened `crontab -e` and added a cron entry to run the script every minute.
+9. Checked the `task.log` file to confirm repeated automated execution.
+
+### Script Used
+
+    #!/bin/bash
+    echo "Task started at $(date)" >> /home/ubuntu/automation_lab/task.log
+    sudo apt update >> /home/ubuntu/automation_lab/task.log 2>&1
+    echo "Task finished at $(date)" >> /home/ubuntu/automation_lab/task.log
+    echo "---------------------------" >> /home/ubuntu/automation_lab/task.log
+
+### Commands Used
+
+    mkdir -p ~/automation_lab
+    cd ~/automation_lab
+    nano update_task.sh
+    chmod +x update_task.sh
+    ./update_task.sh
+    cat task.log
+    crontab -e
+    cat /home/ubuntu/automation_lab/task.log
+
+### Cron Entry
+
+    * * * * * /home/ubuntu/automation_lab/update_task.sh
+
+### Evidence
+Screenshots were taken of the cron configuration, the script content, the manual execution, and the repeated log output showing successful automation.
+
+![Lab 3 Screenshot 7](Lab3/7.png)
+![Lab 3 Screenshot 8](Lab3/8.png)
+![Lab 3 Screenshot 9](Lab3/9.png)
+![Lab 3 Screenshot 10](Lab3/10.png)
+
+### Result
+The server automation task was completed successfully. A Bash script was created to automate package update checking, and cron was used to schedule the script to run automatically every minute. The log file confirmed that the script executed repeatedly without manual intervention.
