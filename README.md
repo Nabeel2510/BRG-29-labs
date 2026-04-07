@@ -305,9 +305,6 @@ The file details were checked again to confirm the changes.
 Screenshots were taken while creating the test file, viewing file permissions, changing permissions, creating a group, checking user group membership, and changing the file group.
 
 ![Screenshot 17](Lab1/18.png)
-![Screenshot 18](Lab1/19.png)
-![Screenshot 19](Lab1/20.png)
-
 
 ### Commands Used for Screenshots
 The following command sequence was used to produce the screenshots for this lab section:
