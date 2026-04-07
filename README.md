@@ -90,3 +90,101 @@ Example commands used:
 ![Screenshot 5](Lab1/5.png)
 ![Screenshot 6](Lab1/6.png)
 ![Screenshot 7](Lab1/7.png)
+____________________________________
+
+## Session 1b – Linux Services
+
+### Steps Performed
+
+#### 1. Update the package list
+The package list was updated before installing the required services.
+
+    sudo apt update
+
+#### 2. Install Apache2
+Apache2 was installed to set up a basic web server.
+
+    sudo apt install apache2 -y
+
+#### 3. Start Apache2 service
+The Apache2 service was started using systemctl.
+
+    sudo systemctl start apache2
+
+#### 4. Check Apache2 status
+The service status was checked to confirm that Apache2 was running successfully.
+
+    sudo systemctl status apache2
+
+#### 5. Open Apache in the browser
+The Apache default web page was tested in the browser using the localhost address.
+
+    http://127.0.0.1
+
+#### 6. Install OpenSSH Server and Nmap
+OpenSSH Server was installed to allow SSH access, and Nmap was installed for port scanning.
+
+    sudo apt install openssh-server nmap -y
+
+#### 7. Check SSH service status
+The SSH service status was checked to confirm that the service was active.
+
+    sudo systemctl status ssh
+
+#### 8. Check the IP address
+The IP address of the Ubuntu machine was checked.
+
+    ip a
+
+#### 9. Scan open ports
+Nmap was used to scan the local machine for open ports.
+
+    nmap 127.0.0.1
+
+#### 10. Edit the Apache web page
+The default Apache index page was edited.
+
+    cd /var/www/html
+    sudo nano index.html
+
+A simple message was added to the page to verify that the web content had been changed.
+
+#### 11. Enable firewall and allow HTTP
+The firewall was enabled and HTTP traffic on port 80 was allowed.
+
+    sudo ufw enable
+    sudo ufw allow 80
+    sudo ufw status
+
+#### 12. Download a file using wget
+A sample text file was downloaded from Project Gutenberg.
+
+    wget https://www.gutenberg.org/files/1342/1342-0.txt
+
+#### 13. Create a directory and archive the file
+A new directory was created and the file was archived using tar.
+
+    mkdir Books
+    tar -cvf Books.tar Books
+
+#### 14. Compress and decompress the archive
+The archive was compressed using bzip2 and later decompressed.
+
+    bzip2 Books.tar
+    bunzip2 Books.tar.bz2
+
+### Evidence
+Screenshots were taken while installing Apache2, checking service status, viewing the Apache page in the browser, checking IP address, scanning ports, editing the web page, enabling the firewall, downloading the file, and creating the archive.
+
+![Screenshot 8](Lab1/8.png)
+![Screenshot 9](Lab1/9.png)
+![Screenshot 10](Lab1/10.png)
+![Screenshot 11](Lab1/11.png)
+![Screenshot 12](Lab1/12.png)
+![Screenshot 12](Lab1/13.png)
+![Screenshot 12](Lab1/14.png)
+![Screenshot 12](Lab1/15.png)
+![Screenshot 12](Lab1/16.png)
+
+______________________________
+
