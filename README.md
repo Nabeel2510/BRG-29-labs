@@ -1,21 +1,17 @@
-# BRG-29-labs
-# BRG-ISEA Lab Activities
+## Session 1a – Setting Up Linux
 
-## Session 1a
+### Tasks Completed
+- Prepared a GitHub repository for documenting lab activities.
+- Downloaded the Ubuntu Desktop ISO from the official Ubuntu website.
+- Installed Oracle VirtualBox.
+- Downloaded ubuntu-24.04.4-desktop-amd64.iso
+- Created a new Ubuntu virtual machine.
+- Configured the virtual machine with suitable memory, processor, and storage settings.
+- Mounted the Ubuntu ISO and completed the installation.
+- Booted successfully into the Ubuntu desktop environment.
 
-### Tasks completed
-- Created GitHub account
-- Created repository
-- Installed VirtualBox
-- Downloaded Ubuntu ISO
-- Created Ubuntu virtual machine
-- Installed Ubuntu successfully
-- Practised basic Linux commands
+### Evidence
+![Ubuntu VM](screenshot1.png)
 
-### Commands practised
-- pwd
-- ls
-- cd
-- mkdir
-- touch
-- man ls
+
+![Ubuntu Desktop](screenshot2.png)
