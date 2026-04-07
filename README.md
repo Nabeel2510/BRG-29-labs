@@ -618,7 +618,6 @@ Screenshots were taken of the domain setup, DNS verification, Apache page, certi
 ![Lab 3 Screenshot 3](Lab3/3.png)
 ![Lab 3 Screenshot 4](Lab3/4.png)
 ![Lab 3 Screenshot 5](Lab3/5.png)
-![Lab 3 Screenshot 6](Lab3/6.png)
 
 ### Result
 The AWS Ubuntu server was successfully linked to the DuckDNS domain. DNS resolution worked correctly, Apache was accessible through the domain name, HTTPS was enabled using Let’s Encrypt, and the renewal dry-run completed successfully.
