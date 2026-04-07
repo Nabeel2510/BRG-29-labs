@@ -188,3 +188,69 @@ Screenshots were taken while installing Apache2, checking service status, viewin
 
 ______________________________
 
+## Session 1b – Searching Filesystems
+
+### Steps Performed
+
+#### 1. Create a test folder
+A new folder was created for testing file search commands.
+
+    mkdir SearchLab
+    cd SearchLab
+
+#### 2. Create sample files
+Several sample files were created for search practice.
+
+    touch file1.txt
+    touch file2.txt
+    touch notes.txt
+
+#### 3. Add text into files
+Sample text was added into the files using echo.
+
+    echo "Hello world" > file1.txt
+    echo "Linux is useful" > file2.txt
+    echo "This is a search test" > notes.txt
+
+#### 4. Search for a file by name
+The `find` command was used to locate a specific file by name.
+
+    find . -name "file1.txt"
+
+#### 5. Search for text inside files
+The `grep` command was used to search for text inside files.
+
+    grep -r "Linux" .
+
+#### 6. Search for another keyword
+Another keyword was searched to check file contents.
+
+    grep -r "search" .
+
+#### 7. Combine search activities
+Different files and keywords were searched to understand how file searching works in Linux.
+
+### Evidence
+Screenshots were taken while creating the test files and while using `find` and `grep` to search by filename and file content.
+
+![Screenshot 14](Lab1/17.png)
+![Screenshot 15](Lab1/18.png)
+![Screenshot 16](Lab1/19.png)
+
+
+### Commands Used for Screenshots
+The following command sequence was used to produce the screenshots for this lab section:
+
+    mkdir SearchLab
+    cd SearchLab
+    touch file1.txt
+    touch file2.txt
+    touch notes.txt
+    echo "Hello world" > file1.txt
+    echo "Linux is useful" > file2.txt
+    echo "This is a search test" > notes.txt
+    find . -name "file1.txt"
+    grep -r "Linux" .
+    grep -r "search" .
+
+
