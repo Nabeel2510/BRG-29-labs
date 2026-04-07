@@ -699,5 +699,47 @@ Commands used:
     
 ![Lab 3 Screenshot 10](Lab3/11.png)
 __________________________________________
+## Session 4a – Additional Server Services
 
-    
+### Objective
+The purpose of this task was to install, configure, and test an additional server service on the Ubuntu cloud server.
+
+### Service Chosen
+The additional server service selected for this task was MySQL Server.
+
+### Steps Performed
+1. Started the AWS EC2 Ubuntu server.
+2. Connected to the server using SSH from WSL.
+3. Updated the package list.
+4. Installed MySQL Server.
+5. Started the MySQL service.
+6. Checked the service status to confirm it was running.
+7. Opened the MySQL shell.
+8. Created a test database called `labdb`.
+9. Listed the available databases to confirm successful creation.
+
+### Commands Used
+
+    sudo apt update
+    sudo apt install mysql-server -y
+    sudo systemctl start mysql
+    sudo systemctl status mysql
+    mysql --version
+    sudo mysql
+
+### MySQL Commands Used
+
+    CREATE DATABASE labdb;
+    SHOW DATABASES;
+    exit
+
+### Evidence
+Screenshots were taken of the MySQL installation, service status, and database creation test.
+
+![Lab 4 Screenshot 1](Lab4/1.png)
+![Lab 4 Screenshot 2](Lab4/2.png)
+![Lab 4 Screenshot 3](Lab4/3.png)
+
+### Result
+MySQL Server was installed successfully on the Ubuntu cloud server. The service started correctly, and a test database was created to confirm that the server was working properly.
+ ________________________________________________________
