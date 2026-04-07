@@ -11,7 +11,5 @@
 - Booted successfully into the Ubuntu desktop environment.
 
 ### Evidence
-![Ubuntu VM](screenshot1.png)
-
-
-![Ubuntu Desktop](screenshot2.png)
+![Ubuntu VM](Lab1/VirtualBox_n7IV5SYyKg.png)
+![Ubuntu Desktop](Lab1/VirtualBoxVM_AviQvEASTN.png)
