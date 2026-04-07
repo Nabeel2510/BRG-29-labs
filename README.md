@@ -234,9 +234,6 @@ Different files and keywords were searched to understand how file searching work
 Screenshots were taken while creating the test files and while using `find` and `grep` to search by filename and file content.
 
 ![Screenshot 14](Lab1/17.png)
-![Screenshot 15](Lab1/18.png)
-![Screenshot 16](Lab1/19.png)
-
 
 ### Commands Used for Screenshots
 The following command sequence was used to produce the screenshots for this lab section:
@@ -252,5 +249,7 @@ The following command sequence was used to produce the screenshots for this lab 
     find . -name "file1.txt"
     grep -r "Linux" .
     grep -r "search" .
+
+___________________________________
 
 
