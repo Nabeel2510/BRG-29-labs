@@ -322,5 +322,79 @@ The following command sequence was used to produce the screenshots for this lab 
     sudo chown $USER permissiontest.txt
     sudo chgrp labgroup permissiontest.txt
     ls -l permissiontest.txt
+__________________________________
+
+## Session 2a – Total Cost of Ownership (TCO)
+
+### Printers Chosen
+Two printers were selected for comparison:
+- Printer A: Epson EcoTank L4260
+- Printer B: Brother DCP-L2640DW Laser Printer
+
+### Assumptions Used
+The following assumptions were used in the spreadsheet:
+- Comparison period: 5 years
+- Weeks per year: 52
+- Pages printed per week: 750
+- Hours powered per week: 40
+- Paper sheets per ream: 500
+- Electricity tariff: S$0.30 per kWh
+- Print mix: mostly black text documents
+
+### Cost Components Considered
+The following cost items were included:
+- Printer purchase cost
+- Consumables cost
+- Paper cost
+- Electricity cost
+
+### Steps Performed
+1. Chose two printer models for comparison.
+2. Collected the prices of the printers and their consumables.
+3. Defined assumptions based on the lab brief.
+4. Created a spreadsheet to separate fixed and variable costs.
+5. Calculated the 5-year TCO for each printer.
+6. Calculated the cost per page for each printer.
+7. Added a home-use sensitivity check for 5 pages per week.
+8. Calculated the break-even point.
+
+### Evidence
+![Lab 2a Screenshot 1](Lab2/1.png)
+![Lab 2a Screenshot 2](Lab2/2.png)
+![Lab 2a Screenshot 3](Lab2/3.png)
+![Lab 2a Screenshot 4](Lab2/4.png)
+
+### Summary of Results
+The final spreadsheet results showed:
+- Epson EcoTank L4260 total TCO over 5 years: **S$3,046.74**
+- Brother DCP-L2640DW total TCO over 5 years: **S$13,170.41**
+- Epson cost per page: **S$0.0156**
+- Brother cost per page: **S$0.0675**
+- Cheaper option over 5 years: **Epson EcoTank L4260**
+- Home-use TCO at 5 pages per week:
+  - Epson: **S$431.97**
+  - Brother: **S$423.32**
+- Break-even point: **2,458.68 pages**
+- Break-even time at 750 pages per week: **3.28 weeks**
+
+### Reflection Questions
+
+**1. Based on the TCO, which printer is the most cost-effective over 5 years?**  
+Based on the spreadsheet results, the Epson EcoTank L4260 was the most cost-effective printer over 5 years. Although its purchase price was higher, its running cost was much lower, which made it cheaper overall in the long term.
+
+**2. Would the answer change for a home user who prints only 5 pages per week?**  
+Yes. For a home user who prints only 5 pages per week, the Brother printer was slightly cheaper overall. This is because the lower purchase price becomes more important when printing volume is very low.
+
+**3. What other non-financial factors could influence printer selection?**  
+Other factors include print quality, print speed, wireless features, duplex printing, reliability, ease of maintenance, and brand support. These factors may influence the decision even if one printer has a lower TCO.
+
+**4. What cost components are more significant for a large workgroup printer?**  
+For a large workgroup printer, consumables, maintenance, paper usage, electricity usage, and reliability are more significant. In high-volume printing, running cost becomes more important than the initial purchase price.
+
+**5. At what point do the two printer options break even in cost?**  
+The two printer options break even at approximately **2,458.68 pages**, which is about **3.28 weeks** at a printing rate of 750 pages per week. After this point, the Epson EcoTank becomes the cheaper option.
+
+### File Submitted
+The full TCO calculations were completed in a spreadsheet file, while the README provides a summary of the assumptions, results, and reflection answers.
 
 
