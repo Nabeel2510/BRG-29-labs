@@ -596,7 +596,6 @@ The following tools and services were used:
 10. Installed Certbot and the Apache plugin.
 11. Ran `sudo certbot --apache` to generate and install the TLS certificate.
 12. Verified HTTPS access in the browser.
-13. Ran `sudo certbot renew --dry-run` to test certificate renewal.
 
 ### Commands Used
 
@@ -610,7 +609,6 @@ The following tools and services were used:
     nslookup YOURSUBDOMAIN.duckdns.org
     sudo apt install certbot python3-certbot-apache -y
     sudo certbot --apache
-    sudo certbot renew --dry-run
 
 ### Evidence
 Screenshots were taken of the domain setup, DNS verification, Apache page, certificate setup, and renewal dry-run.
