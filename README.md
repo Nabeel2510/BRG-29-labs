@@ -569,4 +569,77 @@ Screenshots were taken while creating and running the Bash scripts, and while te
 
 ### Result
 This task provided basic practice in Bash scripting and Linux automation. Simple shell scripts were created successfully using `echo`, `if`, `for`, and `while`, and a cron job example was also tested.
+
+__________________________________________________________________________________
+## Session 3a – DNS & Certificates
+
+### Objective
+The purpose of this task was to understand DNS configuration and TLS certificates by linking a domain name to a cloud server and securing it with HTTPS using Let’s Encrypt.
+
+### Platform and Tools Used
+The following tools and services were used:
+- AWS EC2 Ubuntu Server
+- Apache2
+- DuckDNS
+- Certbot / Let’s Encrypt
+
+### Steps Performed
+1. Started the AWS EC2 Ubuntu server.
+2. Checked the public IPv4 address of the instance.
+3. Ensured inbound ports 22, 80, and 443 were open in the security group.
+4. Connected to the server using SSH from WSL.
+5. Installed Apache2 and started the service.
+6. Edited the default Apache web page.
+7. Created a DuckDNS subdomain.
+8. Updated the DuckDNS record to point to the AWS public IP address.
+9. Verified DNS resolution using browser access and `nslookup`.
+10. Installed Certbot and the Apache plugin.
+11. Ran `sudo certbot --apache` to generate and install the TLS certificate.
+12. Verified HTTPS access in the browser.
+13. Ran `sudo certbot renew --dry-run` to test certificate renewal.
+
+### Commands Used
+
+    ssh -i aws-webserver-key.pem ubuntu@YOUR_PUBLIC_IP
+    sudo apt update
+    sudo apt install apache2 -y
+    sudo systemctl start apache2
+    sudo systemctl status apache2
+    cd /var/www/html
+    sudo nano index.html
+    nslookup YOURSUBDOMAIN.duckdns.org
+    sudo apt install certbot python3-certbot-apache -y
+    sudo certbot --apache
+    sudo certbot renew --dry-run
+
+### Evidence
+Screenshots were taken of the domain setup, DNS verification, Apache page, certificate setup, and renewal dry-run.
+
+![Lab 3 Screenshot 1](Lab3/1.png)
+![Lab 3 Screenshot 2](Lab3/2.png)
+![Lab 3 Screenshot 3](Lab3/3.png)
+![Lab 3 Screenshot 4](Lab3/4.png)
+![Lab 3 Screenshot 5](Lab3/5.png)
+![Lab 3 Screenshot 6](Lab3/6.png)
+
+### Result
+The AWS Ubuntu server was successfully linked to the DuckDNS domain. DNS resolution worked correctly, Apache was accessible through the domain name, HTTPS was enabled using Let’s Encrypt, and the renewal dry-run completed successfully.
+
+
+### Reflection Questions
+
+**1. What is the role of DNS in Internet presence?**  
+DNS translates a human-readable domain name into the IP address of a server. This makes websites easier to access without remembering numeric IP addresses.
+
+**2. Why does DNS propagation take time?**  
+DNS propagation takes time because DNS changes must be updated across multiple DNS servers and caches on the Internet. Some systems may still use old cached records until they refresh.
+
+**3. How does Let’s Encrypt validate domain ownership?**  
+Let’s Encrypt validates domain ownership by checking whether the applicant controls the domain. In this lab, validation was done by confirming that the domain correctly pointed to the web server and that the server could respond to the validation request.
+
+**4. What are the risks if TLS is not configured on a public-facing site?**  
+Without TLS, data sent between the browser and server is not properly protected. This increases the risk of eavesdropping, tampering, and loss of trust from users.
+
+**5. What could happen if you leave your cloud VM running for months?**  
+Leaving a cloud VM running for a long time may result in unnecessary charges. It can also increase security risk if the server is left exposed without proper maintenance or monitoring.
 ______________________________________________________________________________________
