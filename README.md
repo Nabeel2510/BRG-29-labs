@@ -251,5 +251,79 @@ The following command sequence was used to produce the screenshots for this lab 
     grep -r "search" .
 
 ___________________________________
+___________________________________
+## Session 1b – Linux Permissions
+
+### Objective
+The purpose of this task was to understand Linux file permissions and basic user and group management using commands such as `ls -l`, `chmod`, `chown`, and `chgrp`.
+
+### Steps Performed
+
+#### 1. Create a test file
+A new file was created for testing file permissions.
+
+    cd ~
+    touch permissiontest.txt
+    ls -l permissiontest.txt
+
+#### 2. Change file permissions
+The permissions of the file were changed using `chmod`.
+
+    chmod 755 permissiontest.txt
+    ls -l permissiontest.txt
+
+#### 3. Create a new group
+A new group was created for testing group management.
+
+    sudo groupadd labgroup
+
+#### 4. Check current user information
+The current user and group information was checked.
+
+    whoami
+    groups
+
+#### 5. Add the user to the group
+The current user was added to the new group.
+
+    sudo usermod -aG labgroup $USER
+    groups
+
+#### 6. Change file ownership and group
+The ownership and group of the file were changed.
+
+    sudo chown $USER permissiontest.txt
+    sudo chgrp labgroup permissiontest.txt
+    ls -l permissiontest.txt
+
+#### 7. Verify the updated permissions and group
+The file details were checked again to confirm the changes.
+
+    ls -l permissiontest.txt
+
+### Evidence
+Screenshots were taken while creating the test file, viewing file permissions, changing permissions, creating a group, checking user group membership, and changing the file group.
+
+![Screenshot 17](Lab1/18.png)
+![Screenshot 18](Lab1/19.png)
+![Screenshot 19](Lab1/20.png)
+
+
+### Commands Used for Screenshots
+The following command sequence was used to produce the screenshots for this lab section:
+
+    cd ~
+    touch permissiontest.txt
+    ls -l permissiontest.txt
+    chmod 755 permissiontest.txt
+    ls -l permissiontest.txt
+    sudo groupadd labgroup
+    whoami
+    groups
+    sudo usermod -aG labgroup $USER
+    groups
+    sudo chown $USER permissiontest.txt
+    sudo chgrp labgroup permissiontest.txt
+    ls -l permissiontest.txt
 
 
