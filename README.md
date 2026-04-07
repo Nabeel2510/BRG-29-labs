@@ -397,4 +397,51 @@ The two printer options break even at approximately **2,458.68 pages**, which is
 ### File Submitted
 The full TCO calculations were completed in a spreadsheet file, while the README provides a summary of the assumptions, results, and reflection answers.
 
+_____________________________________________
+## Session 2b – Cloud Services
+### Cloud Platform Used
+The cloud platform used for this task was Amazon Web Services (AWS).
+
+### Virtual Machine Details
+The following virtual machine settings were used:
+- Instance name: aws-webserver
+- Platform: AWS EC2
+- Operating System: Ubuntu Server
+- Instance type: t2.micro or t3.micro
+- Access Method: SSH from WSL
+- Security group rules: SSH (22) and HTTP (80)
+
+### Steps Performed
+1. Created an AWS account and logged in to the AWS Console.
+2. Opened the EC2 service and launched a new instance.
+3. Selected Ubuntu Server as the operating system.
+4. Chose a small instance size suitable for the lab.
+5. Created and downloaded a new `.pem` key pair.
+6. Configured the security group to allow SSH and HTTP access.
+7. Launched the EC2 instance and copied its public IPv4 address.
+8. Installed and used WSL as the administrator console.
+9. Copied the `.pem` key into the WSL home directory and changed its permissions.
+10. Connected to the EC2 Ubuntu server using SSH.
+11. Updated the package list and upgraded installed packages.
+
+### Commands Used
+    cp /mnt/c/Users/nabee/Documents/ISE/aws-webserver-key.pem ~/
+    cd ~
+    chmod 400 aws-webserver-key.pem
+    ssh -i aws-webserver-key.pem ubuntu@15.134.227.208
+    sudo apt update
+    sudo apt upgrade -y
+
+### Evidence
+Screenshots were taken of the AWS EC2 instance details, successful SSH login from WSL, and package update commands.
+
+![Lab 2b Screenshot 1](Lab2/9.png)
+![Lab 2b Screenshot 2](Lab2/5.png)
+![Lab 2b Screenshot 3](Lab2/6.png)
+![Lab 2b Screenshot 3](Lab2/7.png)
+![Lab 2b Screenshot 3](Lab2/8.png)
+
+### Result
+The Ubuntu cloud virtual machine was deployed successfully in AWS. SSH access from WSL worked correctly, and the server packages were updated successfully using standard Ubuntu package management commands.
+
 
