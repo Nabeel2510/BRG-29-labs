@@ -686,3 +686,18 @@ Screenshots were taken of the cron configuration, the script content, the manual
 
 ### Result
 The server automation task was completed successfully. A Bash script was created to automate package update checking, and cron was used to schedule the script to run automatically every minute. The log file confirmed that the script executed repeatedly without manual intervention.
+
+### Optional Terminal Customisation
+For presentation purposes, the terminal was also customised using `figlet` and `neofetch` to display a welcome banner and system information more clearly during the lab demonstration.
+
+Commands used:
+
+    sudo apt update
+    sudo apt install figlet neofetch -y
+    figlet Welcome
+    neofetch
+    
+![Lab 3 Screenshot 10](Lab3/11.png)
+__________________________________________
+
+    
