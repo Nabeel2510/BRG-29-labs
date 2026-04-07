@@ -444,4 +444,129 @@ Screenshots were taken of the AWS EC2 instance details, successful SSH login fro
 ### Result
 The Ubuntu cloud virtual machine was deployed successfully in AWS. SSH access from WSL worked correctly, and the server packages were updated successfully using standard Ubuntu package management commands.
 
+_______________________________________________________
+## Session 2b – Bash Scripting
 
+### Tasks Completed
+The following scripting tasks were completed:
+- Created a `.sh` file with `#!/bin/bash`
+- Used `echo` in a simple script
+- Created and ran an `if` statement script
+- Created and ran a `for` loop script
+- Created and ran a `while` loop script
+- Created a basic `cron` job example
+
+### Steps Performed
+
+#### 1. Create a working folder
+A folder was created to store the shell scripts.
+
+    mkdir bash_lab
+    cd bash_lab
+
+#### 2. Create and run a simple script
+A simple script was created to print a message.
+
+    nano hello.sh
+
+Script content:
+
+    #!/bin/bash
+    echo "Hello World"
+
+The script was run using:
+
+    bash hello.sh
+
+It was then made executable and run directly:
+
+    chmod +x hello.sh
+    ./hello.sh
+
+#### 3. Create and run an if statement script
+
+    nano if.sh
+
+Script content:
+
+    #!/bin/bash
+    num=10
+
+    if [ $num -gt 5 ]
+    then
+        echo "Number is greater than 5"
+    fi
+
+Run command:
+
+    bash if.sh
+
+#### 4. Create and run a for loop script
+
+    nano for.sh
+
+Script content:
+
+    #!/bin/bash
+    for i in 1 2 3 4 5
+    do
+        echo "Number: $i"
+    done
+
+Run command:
+
+    bash for.sh
+
+#### 5. Create and run a while loop script
+
+    nano while.sh
+
+Script content:
+
+    #!/bin/bash
+    count=1
+
+    while [ $count -le 5 ]
+    do
+        echo "Count: $count"
+        count=$((count + 1))
+    done
+
+Run command:
+
+    bash while.sh
+
+#### 6. Create a cron job example
+
+    nano cronjob.sh
+
+Script content:
+
+    #!/bin/bash
+    echo "Cron is working" >> /home/$USER/cron.txt
+
+The script was made executable:
+
+    chmod +x cronjob.sh
+
+A cron job was added using:
+
+    crontab -e
+
+The following line was added:
+
+    * * * * * /home/$USER/bash_lab/cronjob.sh
+
+The output file was checked using:
+
+    cat /home/$USER/cron.txt
+
+### Evidence
+Screenshots were taken while creating and running the Bash scripts, and while testing the cron job output.
+
+![Lab 2b Screenshot 6](Lab2/10.png)
+![Lab 2b Screenshot 7](Lab2/11.png)
+
+### Result
+This task provided basic practice in Bash scripting and Linux automation. Simple shell scripts were created successfully using `echo`, `if`, `for`, and `while`, and a cron job example was also tested.
+______________________________________________________________________________________
